@@ -1,20 +1,21 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from '../../pages/Home';
 import Profil from '../../pages/Profil';
 import Trending from '../../pages/Trending';
+// import Navbar from '../Navbar';
 
 const index = () => {
-    return (
-        <Router>
-            <Routes>
-                <Route path="/" exact component={Home} />
-                <Route path="/profil" exact component={Profil} />
-                <Route path="/trending" exact component={Trending} />
-                <Route path="*" component={Home} />
-            </Routes>
-        </Router>
-    );
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" exact element={<Home />} />
+        <Route path="/profil" exact element={<Profil />} />
+        <Route path="/trending" exact element={<Trending />} />
+        <Route path="*" element={<Home />} />
+      </Routes>
+    </Router>
+  );
 };
 
 export default index;

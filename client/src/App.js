@@ -4,7 +4,6 @@ import Routes from "./components/Routes";
 const App = () => {
   return (
     <div>
-      sault
       <Routes />
     </div>
       
